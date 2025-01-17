@@ -56,8 +56,8 @@ gdbstub: enabled=1, port=1234, text_base=0, data_base=0, bss_base=0
 
 ################### 配置文件结束 #####################
 ## 此时及配置完成进行查看:
-bin/bochs -f bochsrc.disk
-![运行结果]4ff0de770f48f41dff9038f807df5d2.png
+bin/bochs -f bochsrc.disk  
+![运行结果](https://github.com/shibuchou/truthlib/blob/main/4ff0de770f48f41dff9038f807df5d2.png)
 ## 创建启动磁盘:
 bin/bximage  
 依次输入:  

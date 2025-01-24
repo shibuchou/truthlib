@@ -48,7 +48,7 @@ mouse: enabled=0
 keyboard: keymap=/home/shibuchou/truth/bochs/share/bochs/keymaps/x11-pc-us.map  
 
 #硬盘设置  
-ata0: enabled=1, ioaddr1=0x1f0, ioaddr2=0x3f0, irq=14
+ata0: enabled=1, ioaddr1=0x1f0, ioaddr2=0x3f0, irq=14  
 ata0-master: type=disk, path="hd60M.img", mode=flat,cylinders=121,heads=16,spt=63  
 
 #下面的是增加的 bochs 对 gdb 的支持，这样 gdb 便可以远程连接到此机器的 1234 端口调试了

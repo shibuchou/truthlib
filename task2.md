@@ -63,7 +63,8 @@
  nasm -o mbr mbr.S
 
  dd if=/home/shibuchou/truth/mbr.bin of=/home/shibuchou/truth/bochs/hd60M.img bs=512 count=1 conv=notrunc  
- ![结果]()
+ ![结果](https://github.com/shibuchou/truthlib/blob/51d83be12d8bfc615c449cbe7f6b3649d6b4e338/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20250124223145.png)
+ 
 # 2.学习基础的汇编指令
 ## bios是什么
 BIOS 全称叫 Base Input & Output System，即基本输入输出系统。  

@@ -25,8 +25,8 @@ megs: 32
 
 #第二步，设置对应真实机器的 BIOS 和 VGA BIOS。  
 #对应两个关键字为：romimage 和 vgaromimage  
-romimage: file=./bios/BIOS-bochs-latest  
-vgaromimage: file=./bios/VGABIOS-lgpl-latest
+romimage: file=/home/shibuchou/truth/bochs/share/bochs/BIOS-bochs-latest  
+vgaromimage: file=/home/shibuchou/truth/bochs/share/bochs/VGABIOS-lgpl-latest  
 
 #第三步，设置 Bochs 所使用的磁盘，软盘的关键字为 floppy。  
 #若只有一个软盘，则使用 floppya 即可，若有多个，则为 floppya，floppyb…  
@@ -45,14 +45,15 @@ log: bochs.out
 
 #下面是关闭鼠标，并打开键盘。  
 mouse: enabled=0  
-keyboard: keymap=./gui/keymaps/x11-pc-us.map
+keyboard: keymap=/home/shibuchou/truth/bochs/share/bochs/keymaps/x11-pc-us.map  
 
 #硬盘设置  
 ata0: enabled=1, ioaddr1=0x1f0, ioaddr2=0x3f0, irq=14
+ata0-master: type=disk, path="hd60M.img", mode=flat,cylinders=121,heads=16,spt=63  
 
 #下面的是增加的 bochs 对 gdb 的支持，这样 gdb 便可以远程连接到此机器的 1234 端口调试了
 
-gdbstub: enabled=1, port=1234, text_base=0, data_base=0, bss_base=0
+#gdbstub: enabled=1, port=1234, text_base=0, data_base=0, bss_base=0
 
 ################### 配置文件结束 #####################
 ## 此时及配置完成进行查看:
